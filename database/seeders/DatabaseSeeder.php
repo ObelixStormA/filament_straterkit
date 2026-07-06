@@ -13,6 +13,24 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RolePermissionSeeder::class,
             AdminUserSeeder::class,
+            SiteSettingSeeder::class,
+            HeroSlideSeeder::class,
+            HeroStatSeeder::class,
+            AboutSectionSeeder::class,
+            AboutValueSeeder::class,
+            ProgramSeeder::class,
+            ContentBlockSeeder::class,
+            LabSeeder::class,
+            StatNumberSeeder::class,
+            AdmissionStepSeeder::class,
+            AdmissionKeyDateSeeder::class,
+            TestimonialSeeder::class,
+            NewsCategorySeeder::class,
+            NewsSeeder::class,
+            PublicationSeeder::class,
+            PartnerSeeder::class,
+            SocialLinkSeeder::class,
+            PageSeeder::class,
         ]);
     }
 }

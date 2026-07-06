@@ -1,0 +1,31 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Actions\Publication;
+
+use App\Data\Publication\PublicationData;
+use App\Models\Publication;
+
+class CreatePublicationAction
+{
+    public function handle(PublicationData $data): Publication
+    {
+        $order = Publication::query()->max('order');
+
+        return Publication::query()->create([
+            'type' => $data->type,
+            'cover_image' => $data->cover_image,
+            'year' => $data->year,
+            'issue_number' => $data->issue_number,
+            'event_type' => $data->event_type,
+            'code_type' => $data->code_type,
+            'code_value' => $data->code_value,
+            'file_url' => $data->file_url,
+            'title' => $data->title,
+            'description' => $data->description,
+            'is_published' => $data->is_published,
+            'order' => $order === null ? 0 : $order + 1,
+        ]);
+    }
+}

@@ -34,6 +34,11 @@ class Menu extends Model
         'permission_name',
         'order',
         'is_active',
+        'link_type',
+        'location',
+        'page_id',
+        'section_anchor',
+        'open_in_new_tab',
     ];
 
     protected function casts(): array
@@ -41,6 +46,7 @@ class Menu extends Model
         return [
             'is_active' => 'boolean',
             'order' => 'integer',
+            'open_in_new_tab' => 'boolean',
         ];
     }
 
@@ -52,6 +58,11 @@ class Menu extends Model
     public function children(): HasMany
     {
         return $this->hasMany(self::class, 'parent_id')->orderBy('order');
+    }
+
+    public function page(): BelongsTo
+    {
+        return $this->belongsTo(Page::class);
     }
 
     protected function isVisibleToUser(): Attribute

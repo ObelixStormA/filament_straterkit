@@ -19,6 +19,11 @@ class UpdateMenuAction
             'icon' => $data->icon,
             'permission_name' => $data->permission_name,
             'is_active' => $data->is_active,
+            'link_type' => $data->link_type,
+            'location' => $data->location,
+            'page_id' => $data->page_id,
+            'section_anchor' => $data->section_anchor,
+            'open_in_new_tab' => $data->open_in_new_tab,
         ]);
 
         return $menu;
