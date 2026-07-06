@@ -1,0 +1,428 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="uz"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="uz"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>Jurnallar — Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti</title>
+    <meta name="keywords" content="harbiy institut, ilmiy jurnal, nashrlar">
+    <meta name="description" content="Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Institutining ilmiy jurnallari.">
+    <meta name="author" content="AKTVA Instituti">
+
+    <!-- Site Icons -->
+    <link rel="icon" href="images/ahi.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/ahi.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom & Default Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- HARBIY INSTITUT: yangi tema override fayli -->
+    <link rel="stylesheet" href="css/harbiy-theme.css">
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="images/ahi.png" alt="Yuklanmoqda">
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div id="wrapper">
+        <!-- BEGIN # MODAL LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="div-forms">
+                        <form id="login-form">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="flaticon-add" aria-hidden="true"></span>
+                            </button>
+                            <div class="modal-body">
+                                <input class="form-control" type="text" placeholder="Sayt bo'yicha qidiruv..." required>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — header/navigatsiya boshqa sahifalar bilan bir xillashtirildi -->
+        <header class="header header-normal">
+            <div class="topbar clearfix">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <p>
+                                <strong><i class="fa fa-phone"></i></strong> +998 71 200 00 00 &nbsp;&nbsp;
+                                <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:info@aktva.uz">info@aktva.uz</a>
+                            </p>
+                        </div><!-- end left -->
+                        <div class="col-md-6 col-sm-6 hidden-xs text-right">
+                            <div class="social">
+                                <a class="facebook" href="#" data-tooltip="tooltip" data-placement="bottom" title="Telegram"><i class="fa fa-telegram"></i></a>
+                                <a class="twitter" href="#" data-tooltip="tooltip" data-placement="bottom" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a class="google" href="#" data-tooltip="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a class="linkedin" href="#" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            </div><!-- end social -->
+                        </div><!-- end left -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end topbar -->
+
+            <div class="container">
+                <nav class="navbar navbar-default yamm">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo-normal">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/ahi.png" alt="Institut gerbi" class="navbar-gerb">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Bosh sahifa</a></li>
+                            <li><a href="index.html#about">Institut haqida</a></li>
+                            <li><a href="index.html#yonalishlar">Ta'lim yo'nalishlari</a></li>
+                            <li><a href="index.html#kursantlarga">Kursantlarga</a></li>
+                            <li><a href="index.html#ilmiy-faoliyat">Ilmiy faoliyat</a></li>
+                            <li class="dropdown hassubmenu active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ilmiy jurnallar <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="active"><a href="jurnallar.html">Jurnallar</a></li>
+                                    <li><a href="toplamlar.html">To'plamlar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.html#qabul">Qabul</a></li>
+                            <li><a href="page-contact.html">Aloqa</a></li>
+                            <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
+                            <li class="iconitem dropdown hassubmenu lang-dropdown">
+                                <a href="#" class="lang-switch dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="lang-current">UZ</span> <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu lang-menu" role="menu">
+                                    <li><a href="#">O'zbek</a></li>
+                                    <li><a href="#">Рус</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav><!-- end navbar -->
+            </div><!-- end container -->
+        </header>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — sahifa sarlavhasi -->
+        <section class="section db p120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tagline-message page-title text-center">
+                            <h3>Ilmiy jurnallar</h3>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">AKTVA Instituti</a></li>
+                                <li><a href="#">Ilmiy jurnallar</a></li>
+                                <li class="active">Jurnallar</li>
+                            </ul>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Jurnallar ro'yxati (blog-3.html grid tuzilmasi asosida) -->
+        <section class="section gb nopadtop">
+            <div class="container">
+                <div class="boxed boxedp4">
+                    <div class="row blog-grid">
+                        <div class="col-md-4">
+                            <div class="course-box">
+                                <div class="image-wrap entry">
+                                    <div class="img-placeholder" role="img" aria-label="Jurnal muqovasi" data-description="[JURNAL MUQOVASI: 2026, 1-son]"><i class="fa fa-file-pdf-o" style="font-size:36px;"></i></div>
+                                </div><!-- end image-wrap -->
+                                <div class="course-details">
+                                    <h4>
+                                        <small>2026, 1-son</small>
+                                        <a href="#" title="">AKTVA Ilmiy-texnikaviy jurnali</a>
+                                    </h4>
+                                    <p>Axborot xavfsizligi, kibermudofaa va harbiy aloqa tizimlari bo'yicha ilmiy maqolalar to'plami.</p>
+                                </div><!-- end details -->
+                                <div class="course-footer clearfix">
+                                    <div class="pull-left">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-calendar"></i> 2026</a></li>
+                                            <li><a href="#"><i class="fa fa-book"></i> ISSN 2181-XXXX</a></li>
+                                        </ul>
+                                    </div><!-- end left -->
+                                    <div class="pull-right">
+                                        <a href="#"><i class="fa fa-download"></i> Yuklab olish</a>
+                                    </div>
+                                </div><!-- end footer -->
+                            </div><!-- end box -->
+                        </div><!-- end col -->
+
+                        <div class="col-md-4">
+                            <div class="course-box">
+                                <div class="image-wrap entry">
+                                    <div class="img-placeholder" role="img" aria-label="Jurnal muqovasi" data-description="[JURNAL MUQOVASI: 2025, 4-son]"><i class="fa fa-file-pdf-o" style="font-size:36px;"></i></div>
+                                </div><!-- end image-wrap -->
+                                <div class="course-details">
+                                    <h4>
+                                        <small>2025, 4-son</small>
+                                        <a href="#" title="">AKTVA Ilmiy-texnikaviy jurnali</a>
+                                    </h4>
+                                    <p>Raqamli kriptografiya va tarmoq xavfsizligi mavzusidagi maqolalar.</p>
+                                </div><!-- end details -->
+                                <div class="course-footer clearfix">
+                                    <div class="pull-left">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-calendar"></i> 2025</a></li>
+                                            <li><a href="#"><i class="fa fa-book"></i> ISSN 2181-XXXX</a></li>
+                                        </ul>
+                                    </div><!-- end left -->
+                                    <div class="pull-right">
+                                        <a href="#"><i class="fa fa-download"></i> Yuklab olish</a>
+                                    </div>
+                                </div><!-- end footer -->
+                            </div><!-- end box -->
+                        </div><!-- end col -->
+
+                        <div class="col-md-4">
+                            <div class="course-box">
+                                <div class="image-wrap entry">
+                                    <div class="img-placeholder" role="img" aria-label="Jurnal muqovasi" data-description="[JURNAL MUQOVASI: 2025, 3-son]"><i class="fa fa-file-pdf-o" style="font-size:36px;"></i></div>
+                                </div><!-- end image-wrap -->
+                                <div class="course-details">
+                                    <h4>
+                                        <small>2025, 3-son</small>
+                                        <a href="#" title="">AKTVA Ilmiy-texnikaviy jurnali</a>
+                                    </h4>
+                                    <p>Harbiy aloqa tarmoqlarida signal xavfsizligi bo'yicha tadqiqotlar.</p>
+                                </div><!-- end details -->
+                                <div class="course-footer clearfix">
+                                    <div class="pull-left">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-calendar"></i> 2025</a></li>
+                                            <li><a href="#"><i class="fa fa-book"></i> ISSN 2181-XXXX</a></li>
+                                        </ul>
+                                    </div><!-- end left -->
+                                    <div class="pull-right">
+                                        <a href="#"><i class="fa fa-download"></i> Yuklab olish</a>
+                                    </div>
+                                </div><!-- end footer -->
+                            </div><!-- end box -->
+                        </div><!-- end col -->
+
+                        <div class="col-md-4">
+                            <div class="course-box">
+                                <div class="image-wrap entry">
+                                    <div class="img-placeholder" role="img" aria-label="Jurnal muqovasi" data-description="[JURNAL MUQOVASI: 2025, 2-son]"><i class="fa fa-file-pdf-o" style="font-size:36px;"></i></div>
+                                </div><!-- end image-wrap -->
+                                <div class="course-details">
+                                    <h4>
+                                        <small>2025, 2-son</small>
+                                        <a href="#" title="">AKTVA Ilmiy-texnikaviy jurnali</a>
+                                    </h4>
+                                    <p>OSINT usullari va signal monitoringi bo'yicha ilmiy maqolalar.</p>
+                                </div><!-- end details -->
+                                <div class="course-footer clearfix">
+                                    <div class="pull-left">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-calendar"></i> 2025</a></li>
+                                            <li><a href="#"><i class="fa fa-book"></i> ISSN 2181-XXXX</a></li>
+                                        </ul>
+                                    </div><!-- end left -->
+                                    <div class="pull-right">
+                                        <a href="#"><i class="fa fa-download"></i> Yuklab olish</a>
+                                    </div>
+                                </div><!-- end footer -->
+                            </div><!-- end box -->
+                        </div><!-- end col -->
+
+                        <div class="col-md-4">
+                            <div class="course-box">
+                                <div class="image-wrap entry">
+                                    <div class="img-placeholder" role="img" aria-label="Jurnal muqovasi" data-description="[JURNAL MUQOVASI: 2025, 1-son]"><i class="fa fa-file-pdf-o" style="font-size:36px;"></i></div>
+                                </div><!-- end image-wrap -->
+                                <div class="course-details">
+                                    <h4>
+                                        <small>2025, 1-son</small>
+                                        <a href="#" title="">AKTVA Ilmiy-texnikaviy jurnali</a>
+                                    </h4>
+                                    <p>Tarmoq infratuzilmasi va VPN yechimlari bo'yicha maqolalar to'plami.</p>
+                                </div><!-- end details -->
+                                <div class="course-footer clearfix">
+                                    <div class="pull-left">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-calendar"></i> 2025</a></li>
+                                            <li><a href="#"><i class="fa fa-book"></i> ISSN 2181-XXXX</a></li>
+                                        </ul>
+                                    </div><!-- end left -->
+                                    <div class="pull-right">
+                                        <a href="#"><i class="fa fa-download"></i> Yuklab olish</a>
+                                    </div>
+                                </div><!-- end footer -->
+                            </div><!-- end box -->
+                        </div><!-- end col -->
+
+                        <div class="col-md-4">
+                            <div class="course-box">
+                                <div class="image-wrap entry">
+                                    <div class="img-placeholder" role="img" aria-label="Jurnal muqovasi" data-description="[JURNAL MUQOVASI: 2024, 4-son]"><i class="fa fa-file-pdf-o" style="font-size:36px;"></i></div>
+                                </div><!-- end image-wrap -->
+                                <div class="course-details">
+                                    <h4>
+                                        <small>2024, 4-son</small>
+                                        <a href="#" title="">AKTVA Ilmiy-texnikaviy jurnali</a>
+                                    </h4>
+                                    <p>Sun'iy yo'ldosh aloqasi va raqamli razvedka mavzusidagi tadqiqotlar.</p>
+                                </div><!-- end details -->
+                                <div class="course-footer clearfix">
+                                    <div class="pull-left">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-calendar"></i> 2024</a></li>
+                                            <li><a href="#"><i class="fa fa-book"></i> ISSN 2181-XXXX</a></li>
+                                        </ul>
+                                    </div><!-- end left -->
+                                    <div class="pull-right">
+                                        <a href="#"><i class="fa fa-download"></i> Yuklab olish</a>
+                                    </div>
+                                </div><!-- end footer -->
+                            </div><!-- end box -->
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+
+                    <hr class="invis">
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="pagination ">
+                                <li class="disabled"><a href="javascript:void(0)">&laquo;</a></li>
+                                <li class="active"><a href="javascript:void(0)">1</a></li>
+                                <li><a href="javascript:void(0)">2</a></li>
+                                <li><a href="javascript:void(0)">3</a></li>
+                                <li><a href="javascript:void(0)">...</a></li>
+                                <li><a href="javascript:void(0)">&raquo;</a></li>
+                            </ul>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end boxed -->
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Footer -->
+        <footer class="section footer noover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="widget clearfix">
+                            <img src="images/ahi.png" alt="Institut gerbi" class="footer-gerb">
+                            <h3 class="widget-title" style="margin-top:20px;">AKTVA Instituti</h3>
+                            <p class="institute-desc">Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti — O'zbekiston Qurolli Kuchlari uchun raqamli mudofaa sohasida zobit kadrlar tayyorlovchi harbiy oliy ta'lim muassasasi.</p>
+                            <div class="social-links">
+                                <a href="#" title="Telegram"><i class="fa fa-telegram"></i></a>
+                                <a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            </div>
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Tezkor havolalar</h3>
+                            <div class="list-widget">
+                                <ul>
+                                    <li><a href="index.html#about">Institut haqida</a></li>
+                                    <li><a href="index.html#yonalishlar">Ta'lim yo'nalishlari</a></li>
+                                    <li><a href="index.html#ilmiy-faoliyat">Ilmiy faoliyat</a></li>
+                                    <li><a href="index.html#qabul">Qabul</a></li>
+                                    <li><a href="page-contact.html">Aloqa</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Aloqa ma'lumotlari</h3>
+                            <div class="list-widget">
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i> &nbsp;Toshkent viloyati, Zangiota tumani</li>
+                                    <li><i class="fa fa-phone"></i> &nbsp;+998 71 200 00 00</li>
+                                    <li><i class="fa fa-envelope"></i> &nbsp;<a href="mailto:info@aktva.uz">info@aktva.uz</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-2 col-md-2">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Foydali havolalar</h3>
+                            <div class="list-widget">
+                                <ul>
+                                    <li><a href="#">Nizom</a></li>
+                                    <li><a href="#">Litsenziya</a></li>
+                                    <li><a href="#">Kadrlar bo'limi</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Copyrights -->
+        <div class="copyrights">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <p style="color:#aaa;margin:0;padding-top:8px;">&copy; 2026 Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti. Barcha huquqlar himoyalangan.</p>
+                    </div>
+
+                    <div class="pull-right">
+                        <div class="footer-links">
+                            <ul class="list-inline">
+                                <li><a href="#">UZ</a></li>
+                                <li><a href="#">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </div><!-- end copy -->
+    </div><!-- end wrapper -->
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>

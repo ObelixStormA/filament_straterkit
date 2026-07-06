@@ -1,0 +1,575 @@
+/* ==========================================================================
+   HARBIY INSTITUT TEMASI
+   Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti
+   Ushbu fayl asosiy style.css ustidan yuklanadi va faqat
+   rang, shrift va ayrim harbiy-mavzuli komponentlarni qo'shadi.
+   style.css ning o'zi o'zgartirilmagan.
+   ========================================================================== */
+
+:root {
+    --harbiy-green-dark: #1B3A2D;
+    --harbiy-green-mid: #2E5E45;
+    --harbiy-green-darkest: #0F2218;
+    --harbiy-gold: #C8A84B;
+    --harbiy-gold-dark: #A88A38;
+    --harbiy-bg: #F4F2EE;
+    --harbiy-text: #1A1A1A;
+    --harbiy-text-secondary: #4A4A4A;
+    --harbiy-accent-red: #8B1A1A;
+}
+
+/* --------------------------------------------------------------------
+   Tipografiya
+   -------------------------------------------------------------------- */
+body, p, li, a, .footer p, .footer a, input, textarea, select {
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+}
+
+body {
+    background-color: var(--harbiy-bg);
+    color: var(--harbiy-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.home-message p,
+.tagline-message h3,
+.section-title h3,
+.widget-title,
+.course-details h4 a,
+.blog-desc h4 a {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+}
+
+.stat-timer,
+.stat-count h4,
+.hero-stats .hero-stat-number,
+.badge-mono,
+.admission-step .step-number {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------
+   Asosiy rang o'zgartirishlari (teal #01bacf -> oltin, qora -> harbiy yashil)
+   -------------------------------------------------------------------- */
+a:hover,
+a:focus,
+.box i,
+.topbar .text-left i {
+    color: var(--harbiy-gold) !important;
+}
+
+mark {
+    background-color: var(--harbiy-gold);
+    color: var(--harbiy-green-darkest);
+    padding: 0 4px;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.tags-widget a,
+.owl-theme-01 .owl-nav [class*="owl-"]:hover,
+.yamm .dropdown-menu li:hover .menu-button,
+.yamm .dropdown-menu li .menu-button {
+    border-color: var(--harbiy-gold) !important;
+    background-color: var(--harbiy-gold) !important;
+    color: var(--harbiy-green-darkest) !important;
+}
+
+.btn-primary {
+    border-color: var(--harbiy-gold);
+    background-color: var(--harbiy-gold);
+    color: var(--harbiy-green-darkest) !important;
+    box-shadow: inset 0 0 0 0 var(--harbiy-gold-dark);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    color: var(--harbiy-green-darkest) !important;
+    box-shadow: inset 0 100px 0 0 var(--harbiy-gold-dark);
+    border-color: var(--harbiy-gold-dark);
+}
+
+/* ikkilamchi (outline) tugma sifatida qayta belgilandi */
+.btn-default {
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff !important;
+    box-shadow: none;
+}
+
+.btn-default:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--harbiy-green-dark) !important;
+    box-shadow: none;
+}
+
+.bgcolor1 {
+    background-color: var(--harbiy-gold) !important;
+    border-color: var(--harbiy-gold) !important;
+}
+
+.bgcolor1 h3, .bgcolor1 h4, .bgcolor1 p {
+    color: var(--harbiy-green-darkest) !important;
+}
+
+/* --------------------------------------------------------------------
+   Header / Topbar / Navbar
+   -------------------------------------------------------------------- */
+.topbar {
+    background-color: var(--harbiy-green-darkest);
+}
+
+.header.affix,
+.header-normal {
+    background-color: var(--harbiy-green-dark) !important;
+}
+
+.header-normal .navbar-default .nav > li > a {
+    color: #ffffff !important;
+}
+
+.navbar-default .dropdown-menu {
+    background-color: #ffffff;
+}
+
+/* Joriy (active) menyu bandi — Bootstrap standart oq/kulrang va ko'k
+   fon o'rniga institut ranglariga moslashtirildi */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li.dropdown.active > a.dropdown-toggle {
+    background-color: transparent !important;
+    color: var(--harbiy-gold) !important;
+}
+
+.navbar-default .dropdown-menu > .active > a,
+.navbar-default .dropdown-menu > .active > a:hover,
+.navbar-default .dropdown-menu > .active > a:focus {
+    background-color: rgba(200, 168, 75, 0.12) !important;
+    color: var(--harbiy-green-dark) !important;
+    font-weight: 600;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 1em !important;
+    color: #ffffff !important;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lang-switch .lang-current {
+    color: var(--harbiy-gold) !important;
+    font-weight: 700;
+}
+
+.lang-dropdown .dropdown-menu.lang-menu {
+    min-width: 110px;
+    left: auto;
+    right: 0;
+}
+
+.lang-menu li a {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* --------------------------------------------------------------------
+   Logo / Gerb placeholder
+   -------------------------------------------------------------------- */
+.img-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(27, 58, 45, 0.06);
+    border: 1px dashed rgba(27, 58, 45, 0.35);
+    color: var(--harbiy-green-mid);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 4px;
+}
+
+.img-placeholder.gerb-placeholder {
+    min-height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    border-color: var(--harbiy-gold);
+    background-color: var(--harbiy-green-darkest);
+    color: var(--harbiy-gold);
+    font-size: 9px;
+}
+
+.navbar-gerb {
+    height: 74px;
+    width: auto;
+    display: block;
+    transition: height 0.3s ease;
+}
+
+.header.affix .navbar-gerb {
+    height: 46px;
+}
+
+.footer-gerb {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Menyu bandlari sig'ishi uchun header konteyneriga ko'proq joy berildi */
+@media (min-width: 1200px) {
+    .header .container {
+        width: 1400px;
+    }
+}
+
+/* Logotip va menyu bir xil o'rta chiziqda (vertikal markazda) tekislansin */
+@media (min-width: 768px) {
+    .navbar-default {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-default .navbar-header {
+        float: none;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-default #navbar {
+        flex: 1 1 auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-default .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        float: none !important;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-default .navbar-nav > li {
+        float: none;
+    }
+}
+
+/* --------------------------------------------------------------------
+   Preloader — gerb aylanib turadi
+   -------------------------------------------------------------------- */
+.preloader {
+    width: 160px;
+    height: 160px;
+    top: 42%;
+    background-size: 160px 160px;
+    animation: harbiy-spin 2.2s linear infinite;
+}
+
+@keyframes harbiy-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.img-placeholder.about-placeholder {
+    min-height: 420px;
+}
+
+.img-placeholder.logo-footer-placeholder {
+    min-height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border-color: var(--harbiy-gold);
+    color: var(--harbiy-gold);
+    font-size: 9px;
+}
+
+/* --------------------------------------------------------------------
+   Hero
+   Muhim: .video-section / #home ustiga background-image qo'yilmaydi —
+   videobg.js shu elementga videoni JS orqali (position:absolute,
+   z-index:-1) qo'shadi. CSS background bilan bosib qo'ymaslik uchun
+   bu blok faqat matn kattaligini o'zgartiradi, fon bilan ishlamaydi.
+   -------------------------------------------------------------------- */
+.home-message p {
+    font-size: 46px;
+    line-height: 1.2;
+}
+
+.hero-stats-strip {
+    padding: 3.5rem 0;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+}
+
+.hero-stats .hero-stat-item {
+    flex: 1 1 22%;
+    min-width: 130px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+.hero-stats .hero-stat-number {
+    display: block;
+    font-size: 28px;
+    color: var(--harbiy-gold);
+    font-weight: 700;
+}
+
+.hero-stats .hero-stat-label {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------
+   Qadriyatlar (values) kartochkalari
+   -------------------------------------------------------------------- */
+.value-box {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid rgba(27, 58, 45, 0.1);
+    border-radius: 4px;
+    height: 100%;
+}
+
+.value-box i {
+    font-size: 32px;
+    color: var(--harbiy-gold);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.value-box h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin: 0;
+    color: var(--harbiy-green-dark);
+}
+
+/* --------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------- */
+.section.gb {
+    background-color: #ECEAE3;
+}
+
+.section.db {
+    background-color: var(--harbiy-green-darkest);
+}
+
+.section.db .section-title p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stat-count h3, .stat-count h4 {
+    color: #ffffff;
+}
+
+.stat-count h3 i {
+    color: var(--harbiy-gold);
+}
+
+/* --------------------------------------------------------------------
+   Xarita (Yandex Maps iframe)
+   -------------------------------------------------------------------- */
+.map-embed {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: 0;
+    margin-bottom: 30px;
+    filter: grayscale(15%);
+}
+
+.tagline-message h3 {
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------
+   Qabul (Admission) bosqichlari
+   -------------------------------------------------------------------- */
+.admission-steps {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: step;
+}
+
+.admission-step {
+    flex: 1 1 20%;
+    min-width: 180px;
+    text-align: center;
+    padding: 0 15px 30px;
+    position: relative;
+}
+
+.admission-step .step-number {
+    width: 56px;
+    height: 56px;
+    line-height: 54px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    border: 2px solid var(--harbiy-gold);
+    color: var(--harbiy-gold);
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #ffffff;
+}
+
+.admission-step h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--harbiy-green-dark);
+    margin: 0 0 8px;
+}
+
+.admission-step p {
+    font-size: 14px;
+    color: var(--harbiy-text-secondary);
+}
+
+/* --------------------------------------------------------------------
+   Partners / hamkorlar
+   -------------------------------------------------------------------- */
+.partners-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partner-placeholder {
+    width: 140px;
+    height: 70px;
+    font-size: 10px;
+}
+
+/* --------------------------------------------------------------------
+   Footer / Copyrights
+   -------------------------------------------------------------------- */
+.section.footer {
+    background-color: var(--harbiy-green-darkest);
+    padding: 8rem 0 4rem;
+}
+
+.footer,
+.footer li {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.copyrights {
+    background-color: #081711;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer .institute-desc {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.footer .social-links {
+    margin-top: 20px;
+}
+
+.footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-right: 8px;
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.footer .social-links a:hover {
+    border-color: var(--harbiy-gold);
+    color: var(--harbiy-gold) !important;
+}
+
+/* --------------------------------------------------------------------
+   Milliy naqsh divider (nozik, girih ilhomli)
+   -------------------------------------------------------------------- */
+.milliy-divider {
+    height: 10px;
+    background-image: repeating-linear-gradient(
+        135deg,
+        var(--harbiy-gold) 0,
+        var(--harbiy-gold) 2px,
+        transparent 2px,
+        transparent 14px
+    );
+    opacity: 0.5;
+}
+
+/* --------------------------------------------------------------------
+   Jurnallar / To'plamlar grid — barcha kartochkalar bir xil balandlikda
+   -------------------------------------------------------------------- */
+.blog-grid.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-grid > [class*="col-"] {
+    display: flex;
+}
+
+.blog-grid .course-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.blog-grid .course-details {
+    flex: 1 1 auto;
+}
+
+.blog-grid .course-footer {
+    margin-top: auto;
+}
+
+/* --------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------- */
+@media (max-width: 767px) {
+    .home-message p {
+        font-size: 30px;
+    }
+
+    .hero-stats .hero-stat-item {
+        flex: 1 1 45%;
+    }
+
+    .admission-step {
+        flex: 1 1 100%;
+    }
+}

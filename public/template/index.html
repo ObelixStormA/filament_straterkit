@@ -1,0 +1,835 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="uz"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="uz"> <!--<![endif]-->
+<head>
+
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti</title>
+    <meta name="keywords" content="harbiy institut, harbiy aloqa, axborot xavfsizligi, kibermudofaa, O'zbekiston, qabul">
+    <meta name="description" content="Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti — O'zbekiston Qurolli Kuchlari uchun kibermudofaa, harbiy aloqa va raqamli texnologiyalar sohasida zobit kadrlar tayyorlovchi harbiy oliy ta'lim muassasasi.">
+    <meta name="author" content="AKTVA Instituti">
+
+    <!-- Site Icons -->
+    <link rel="icon" href="images/ahi.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/ahi.png">
+
+	<!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Custom & Default Styles -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- HARBIY INSTITUT: yangi tema override fayli -->
+    <link rel="stylesheet" href="css/harbiy-theme.css">
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="images/ahi.png" alt="Yuklanmoqda">
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div id="wrapper">
+        <!-- BEGIN # MODAL LOGIN -->
+        <!-- HARBIY INSTITUT: o'zgartirildi — qidiruv oynasi -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="div-forms">
+                        <form id="login-form">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="flaticon-add" aria-hidden="true"></span>
+                            </button>
+                            <div class="modal-body">
+                                <input class="form-control" type="text" placeholder="Sayt bo'yicha qidiruv..." required>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — topbar aloqa ma'lumotlari -->
+        <header class="header">
+            <div class="topbar clearfix">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <p>
+                                <strong><i class="fa fa-phone"></i></strong> +998 71 200 00 00 &nbsp;&nbsp;
+                                <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:info@aktva.uz">info@aktva.uz</a>
+                            </p>
+                        </div><!-- end left -->
+                        <div class="col-md-6 col-sm-6 hidden-xs text-right">
+                            <div class="social">
+                                <a class="facebook" href="#" data-tooltip="tooltip" data-placement="bottom" title="Telegram"><i class="fa fa-telegram"></i></a>
+                                <a class="twitter" href="#" data-tooltip="tooltip" data-placement="bottom" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a class="google" href="#" data-tooltip="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a class="linkedin" href="#" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            </div><!-- end social -->
+                        </div><!-- end left -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end topbar -->
+
+            <div class="container">
+                <nav class="navbar navbar-default yamm">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo-normal">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/ahi.png" alt="Institut gerbi" class="navbar-gerb">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Bosh sahifa</a></li>
+                            <li><a href="#about">Institut haqida</a></li>
+                            <li><a href="#yonalishlar">Ta'lim yo'nalishlari</a></li>
+                            <li><a href="#kursantlarga">Kursantlarga</a></li>
+                            <li><a href="#ilmiy-faoliyat">Ilmiy faoliyat</a></li>
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ilmiy jurnallar <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="jurnallar.html">Jurnallar</a></li>
+                                    <li><a href="toplamlar.html">To'plamlar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#qabul">Qabul</a></li>
+                            <li><a href="page-contact.html">Aloqa</a></li>
+                            <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
+                            <li class="iconitem dropdown hassubmenu lang-dropdown">
+                                <a href="#" class="lang-switch dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="lang-current">UZ</span> <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu lang-menu" role="menu">
+                                    <li><a href="#">O'zbek</a></li>
+                                    <li><a href="#">Рус</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav><!-- end navbar -->
+            </div><!-- end container -->
+        </header>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — HERO bo'lim (original video-section mexanizmi saqlangan) -->
+        <section id="home" class="video-section js-height-full">
+            <div class="overlay"></div>
+            <div class="home-text-wrapper relative container">
+                <div class="home-message">
+                    <p>Vatanparvar Kadrlar — Raqamli Mudofaa Poydevori</p>
+                    <small>Axborot kommunikatsiya texnologiyalari va harbiy aloqa sohasida oliy bilim beruvchi harbiy ta'lim muassasasi</small>
+                    <div class="btn-wrapper">
+                        <div class="text-center">
+                            <a href="#qabul" class="btn btn-primary wow slideInLeft">Qabul hujjatlari</a> &nbsp;&nbsp;&nbsp;<a href="#about" class="btn btn-default wow slideInRight">Institut haqida ko'proq</a>
+                        </div>
+                    </div><!-- end row -->
+                </div>
+            </div>
+            <div class="slider-bottom">
+                <span>Batafsil <i class="fa fa-angle-down"></i></span>
+            </div>
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — hero ostidagi statistika tasmasi (endi alohida, full-screen video bilan aralashmaydi) -->
+        <section class="section db hero-stats-strip">
+            <div class="container">
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number"><i class="fa fa-graduation-cap"></i> 500+</span>
+                        <span class="hero-stat-label">Bitiruvchi</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number"><i class="fa fa-book"></i> 12</span>
+                        <span class="hero-stat-label">Ta'lim yo'nalishi</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number"><i class="fa fa-university"></i> 30+</span>
+                        <span class="hero-stat-label">Yillik tajriba</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number"><i class="fa fa-flask"></i> 8</span>
+                        <span class="hero-stat-label">Ilmiy laboratoriya</span>
+                    </div>
+                </div><!-- end hero-stats -->
+            </div>
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Institut haqida (About) -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="custom-module">
+                            <h2>Institut O'zbekiston <mark>Qurolli Kuchlari</mark> tarkibida faoliyat<br>
+                            yurituvchi harbiy oliy ta'lim muassasasidir</h2>
+
+                            <p>Institut axborot kommunikatsiya texnologiyalari, kibermudofaa, harbiy aloqa tizimlari va raqamli razvedka yo'nalishlarida malakali zobit kadrlar tayyorlaydi. Ta'lim jarayoni zamonaviy texnik bazasi va tajribali professor-o'qituvchilar tarkibi asosida tashkil etilgan.</p>
+
+                            <hr class="invis">
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="value-box">
+                                        <i class="fa fa-shield"></i>
+                                        <h5>Intizom va vatanparvarlik</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="value-box">
+                                        <i class="fa fa-microchip"></i>
+                                        <h5>Zamonaviy texnologiyalar</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="value-box">
+                                        <i class="fa fa-crosshairs"></i>
+                                        <h5>Amaliy ko'nikmalar</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="value-box">
+                                        <i class="fa fa-users"></i>
+                                        <h5>Jamoaviy ruh</h5>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+
+                            <hr class="invis">
+
+                            <div class="btn-wrapper">
+                                <a href="#yonalishlar" class="btn btn-primary">Ta'lim yo'nalishlari bilan tanishish</a>
+                            </div>
+
+                        </div><!-- end module -->
+                    </div><!-- end col -->
+                    <div class="col-md-4 hidden-sm hidden-xs">
+                        <div class="custom-module">
+                            <div class="img-placeholder about-placeholder" role="img" aria-label="Institut bosh binosi" data-description="[BINO RASMI]">BINO RASMI</div>
+                        </div><!-- end module -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Ta'lim yo'nalishlari -->
+        <section id="yonalishlar" class="section gb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Ta'lim yo'nalishlari</h3>
+                    <p>Institutda axborot xavfsizligi, harbiy aloqa va raqamli texnologiyalar sohasida zamonaviy dasturlar asosida ta'lim beriladi.</p>
+                </div><!-- end title -->
+
+                <div id="owl-01" class="owl-carousel owl-theme owl-theme-01">
+                    <div class="caro-item">
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Axborot xavfsizligi yo'nalishi" data-description="[YO'NALISH RASMI: Axborot xavfsizligi]"><i class="fa fa-lock" style="font-size:36px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <small>Yo'nalish</small>
+                                    <a href="#" title="">Axborot xavfsizligi</a>
+                                </h4>
+                                <p>Kibermudofaa, shifrlash va tarmoq himoyasi asoslari.</p>
+                            </div><!-- end details -->
+                            <div class="course-footer clearfix text-center">
+                                <a href="#" class="readmore">Batafsil</a>
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+
+                    <div class="caro-item">
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Harbiy aloqa tizimlari yo'nalishi" data-description="[YO'NALISH RASMI: Harbiy aloqa tizimlari]"><i class="fa fa-wifi" style="font-size:36px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <small>Yo'nalish</small>
+                                    <a href="#" title="">Harbiy aloqa tizimlari</a>
+                                </h4>
+                                <p>Radio, raqamli va sun'iy yo'ldosh aloqasi.</p>
+                            </div><!-- end details -->
+                            <div class="course-footer clearfix text-center">
+                                <a href="#" class="readmore">Batafsil</a>
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+
+                    <div class="caro-item">
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Amaliy dasturlash yo'nalishi" data-description="[YO'NALISH RASMI: Amaliy dasturlash]"><i class="fa fa-code" style="font-size:36px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <small>Yo'nalish</small>
+                                    <a href="#" title="">Amaliy dasturlash</a>
+                                </h4>
+                                <p>Harbiy tizimlar uchun dasturiy ta'minot ishlab chiqish.</p>
+                            </div><!-- end details -->
+                            <div class="course-footer clearfix text-center">
+                                <a href="#" class="readmore">Batafsil</a>
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+
+                    <div class="caro-item">
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Razvedka va monitoring yo'nalishi" data-description="[YO'NALISH RASMI: Razvedka va monitoring]"><i class="fa fa-search" style="font-size:36px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <small>Yo'nalish</small>
+                                    <a href="#" title="">Razvedka va monitoring</a>
+                                </h4>
+                                <p>Signallarni tahlil qilish va OSINT usullari.</p>
+                            </div><!-- end details -->
+                            <div class="course-footer clearfix text-center">
+                                <a href="#" class="readmore">Batafsil</a>
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+
+                    <div class="caro-item">
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Tarmoq infratuzilmasi yo'nalishi" data-description="[YO'NALISH RASMI: Tarmoq infratuzilmasi]"><i class="fa fa-sitemap" style="font-size:36px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <small>Yo'nalish</small>
+                                    <a href="#" title="">Tarmoq infratuzilmasi</a>
+                                </h4>
+                                <p>VPN va xavfsiz tarmoqlarni loyihalash.</p>
+                            </div><!-- end details -->
+                            <div class="course-footer clearfix text-center">
+                                <a href="#" class="readmore">Batafsil</a>
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+
+                    <div class="caro-item">
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Raqamli kriptografiya yo'nalishi" data-description="[YO'NALISH RASMI: Raqamli kriptografiya]"><i class="fa fa-key" style="font-size:36px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <small>Yo'nalish</small>
+                                    <a href="#" title="">Raqamli kriptografiya</a>
+                                </h4>
+                                <p>Shifrlash algoritmlari, ERI va blockchain asoslari.</p>
+                            </div><!-- end details -->
+                            <div class="course-footer clearfix text-center">
+                                <a href="#" class="readmore">Batafsil</a>
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <hr class="invis">
+
+                <div class="section-button text-center">
+                    <a href="#" class="btn btn-primary">Barcha yo'nalishlar</a>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — motto banner -->
+        <section class="section db p120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tagline-message text-center">
+                            <h3>Intizom bilan bilim, vatanparvarlik bilan xizmat — AKTVA Instituti kelajak zobitlarini tayyorlaydi!</h3>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Ilmiy faoliyat: Laboratoriyalar -->
+        <section id="ilmiy-faoliyat" class="section gb nopadtop">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Ilmiy faoliyat — Laboratoriyalar</h3>
+                    <p>Institut tarkibida amaliy va ilmiy-tadqiqot ishlarini olib borish uchun quyidagi laboratoriya va markazlar faoliyat yuritadi.</p>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box m30">
+                            <i class="fa fa-shield"></i>
+                            <h4>Kibermudofaa laboratoriyasi</h4>
+                            <p>Tarmoq hujumlarini aniqlash va bartaraf etish bo'yicha amaliy mashg'ulotlar.</p>
+                            <a href="#" class="readmore">Batafsil</a>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-6">
+                        <div class="box m30">
+                            <i class="fa fa-satellite"></i>
+                            <h4>Harbiy aloqa va simulyatsiya markazi</h4>
+                            <p>Radio va raqamli aloqa tizimlarini modellashtirish, real vaqt rejimida signal uzatish sinovlari o'tkaziladigan zamonaviy markaz.</p>
+                            <a href="#" class="readmore">Batafsil</a>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-3">
+                        <div class="box m30">
+                            <i class="fa fa-bar-chart"></i>
+                            <h4>Statistik tahlil markazi</h4>
+                            <p>Signallar va ma'lumotlarni tahlil qilish bo'yicha ilmiy izlanishlar.</p>
+                            <a href="#" class="readmore">Batafsil</a>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <hr class="invis">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <i class="fa fa-sitemap"></i>
+                            <h4>Tarmoq xavfsizligi laboratoriyasi</h4>
+                            <p>Xavfsiz tarmoq infratuzilmalarini loyihalash va sinovdan o'tkazish bo'yicha amaliyot bazasi.</p>
+                            <a href="#" class="readmore">Batafsil</a>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-6">
+                        <div class="box">
+                            <i class="fa fa-code"></i>
+                            <h4>Dasturiy injiniring markazi</h4>
+                            <p>Harbiy va maxsus tizimlar uchun dasturiy ta'minot ishlab chiqish bo'yicha loyihalar bajariladi.</p>
+                            <a href="#" class="readmore">Batafsil</a>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Raqamlarimiz -->
+        <section class="section db">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-count">
+                            <h4 class="stat-timer">1994</h4>
+                            <h3><i class="fa fa-university"></i> Tashkil etilgan yil</h3>
+                        </div><!-- stat-count -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-count">
+                            <h4 class="stat-timer">500</h4>
+                            <h3><i class="fa fa-graduation-cap"></i> Bitiruvchilar (+)</h3>
+                        </div><!-- stat-count -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-count">
+                            <h4 class="stat-timer">45</h4>
+                            <h3><i class="fa fa-user"></i> O'qituvchi-professor</h3>
+                        </div><!-- stat-count -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-count">
+                            <h4 class="stat-timer">98</h4>
+                            <h3><i class="fa fa-percent"></i> Ishga joylashish</h3>
+                        </div><!-- stat-count -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: yangi bo'lim — Qabul (templateda analogi yo'q edi) -->
+        <section id="qabul" class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Qabul bo'limi</h3>
+                    <p>Institutga qabul quyidagi bosqichlar asosida amalga oshiriladi.</p>
+                </div><!-- end title -->
+
+                <div class="admission-steps">
+                    <div class="admission-step">
+                        <div class="step-number">1</div>
+                        <h5>Hujjatlar topshirish</h5>
+                        <p>Qabul komissiyasiga zarur hujjatlar ro'yxatini topshirish.</p>
+                    </div>
+                    <div class="admission-step">
+                        <div class="step-number">2</div>
+                        <h5>Tibbiy ko'rik</h5>
+                        <p>Harbiy-vrachlik komissiyasidan o'tish.</p>
+                    </div>
+                    <div class="admission-step">
+                        <div class="step-number">3</div>
+                        <h5>Jismoniy tayyorgarlik</h5>
+                        <p>Belgilangan normativlar bo'yicha sinovlar.</p>
+                    </div>
+                    <div class="admission-step">
+                        <div class="step-number">4</div>
+                        <h5>Bilim sinovi</h5>
+                        <p>Matematika, fizika va informatika fanlaridan test sinovi.</p>
+                    </div>
+                    <div class="admission-step">
+                        <div class="step-number">5</div>
+                        <h5>Buyruq e'lon qilinishi</h5>
+                        <p>Qabul natijalari va kursantlar ro'yxati e'lon qilinadi.</p>
+                    </div>
+                </div><!-- end admission-steps -->
+
+                <hr class="invis">
+
+                <div class="btn-wrapper text-center">
+                    <a href="#" class="btn btn-primary">Hujjatlar ro'yxati</a> &nbsp;&nbsp;&nbsp;
+                    <a href="page-contact.html" class="btn btn-default" style="border-color:#1B3A2D;color:#1B3A2D !important;">Ariza shakli</a>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Bitiruvchilar va o'qituvchilar fikri -->
+        <section id="kursantlarga" class="section gb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Bitiruvchilar va o'qituvchilar fikri</h3>
+                    <p>Institutni tugatgan zobitlar va professor-o'qituvchilar tarkibining fikr-mulohazalari.</p>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><span class="img-placeholder logo-footer-placeholder" style="display:inline-flex;vertical-align:middle;" role="img" aria-label="Bitiruvchi surati" data-description="[BITIRUVCHI RASMI]">1</span> Kapitan A. Yusupov</strong></p>
+                            <p>Institutda olgan bilim va amaliy ko'nikmalarim bugungi xizmatimda muhim tayanch bo'lib xizmat qilmoqda.</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><span class="img-placeholder logo-footer-placeholder" style="display:inline-flex;vertical-align:middle;" role="img" aria-label="O'qituvchi surati" data-description="[O'QITUVCHI RASMI]">2</span> professor N. Karimov</strong></p>
+                            <p>Kursantlarimiz nafaqat nazariy bilim, balki zamonaviy laboratoriyalarda amaliy tajriba orttirib chiqishadi.</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><span class="img-placeholder logo-footer-placeholder" style="display:inline-flex;vertical-align:middle;" role="img" aria-label="Bitiruvchi surati" data-description="[BITIRUVCHI RASMI]">3</span> leytenant D. Bekova</strong></p>
+                            <p>Institut menga vatanparvarlik ruhi va intizomni, shu bilan birga zamonaviy kasbiy ko'nikmalarni berdi.</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Yangiliklar va e'lonlar -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Yangiliklar va e'lonlar</h3>
+                    <p>Institut hayotidagi so'nggi voqealar, tadbirlar va rasmiy e'lonlar.</p>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Yangilik surati" data-description="[YANGILIK RASMI 1]"><i class="fa fa-newspaper-o" style="font-size:32px;"></i></div>
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href="blog-single.html">[SARLAVHA] Yangi o'quv yili boshlandi</a></h4>
+                                <p>[QISQA TAVSIF] Institutda 2026-2027 o'quv yili tantanali marosim bilan boshlandi.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#">[SANA] 01 sentabr 2026</a></li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Yangilik surati" data-description="[YANGILIK RASMI 2]"><i class="fa fa-newspaper-o" style="font-size:32px;"></i></div>
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href="blog-single.html">[SARLAVHA] Kibermudofaa bo'yicha xalqaro seminar</a></h4>
+                                <p>[QISQA TAVSIF] Institut hamkor tashkilotlar bilan birgalikda seminar tashkil etdi.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#">[SANA] 15 iyun 2026</a></li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Yangilik surati" data-description="[YANGILIK RASMI 3]"><i class="fa fa-newspaper-o" style="font-size:32px;"></i></div>
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href="blog-single.html">[SARLAVHA] Bitiruvchilarga zobit unvoni topshirildi</a></h4>
+                                <p>[QISQA TAVSIF] Ushbu yilgi bitiruvchilarga tantanali ravishda unvon va diplomlar topshirildi.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#">[SANA] 28 iyun 2026</a></li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="text-center">
+                    <a href="blog.html" class="readmore">Barcha yangiliklar</a>
+                </div>
+
+                <hr class="invis">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box" style="background-color:#F4F2EE;border:1px solid rgba(27,58,45,0.15);">
+                            <h4><i class="fa fa-bullhorn" style="color:#C8A84B;"></i> E'lonlar</h4>
+                            <ul class="check">
+                                <li>Hujjatlar qabul qilish muddati: [SANA oralig'i]</li>
+                                <li>Kirish imtihonlari jadvali: [SANA]</li>
+                                <li>Qabul natijalari e'lon qilinishi: [SANA]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — So'nggi ilmiy ishlar + hamkorlar -->
+        <section class="section gb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>So'nggi ilmiy ishlar</h3>
+                    <p>Institut professor-o'qituvchilari va ilmiy izlanuvchilarining so'nggi nashr etilgan ishlari.</p>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Ilmiy ish rasmi" data-description="[ILMIY ISH RASMI 1]"><i class="fa fa-file-text-o" style="font-size:32px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="blog-desc">
+                                <h4><a href="#">Harbiy aloqa tarmoqlarida signal xavfsizligini oshirish usullari</a></h4>
+                                <p>[QISQA TAVSIF] Ilmiy maqola, 2026-yil nashri.</p>
+                            </div><!-- end blog-desc -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Ilmiy ish rasmi" data-description="[ILMIY ISH RASMI 2]"><i class="fa fa-file-text-o" style="font-size:32px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="blog-desc">
+                                <h4><a href="#">Raqamli kriptografiyada zamonaviy shifrlash algoritmlari</a></h4>
+                                <p>[QISQA TAVSIF] Ilmiy maqola, 2026-yil nashri.</p>
+                            </div><!-- end blog-desc -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <div class="img-placeholder" role="img" aria-label="Ilmiy ish rasmi" data-description="[ILMIY ISH RASMI 3]"><i class="fa fa-file-text-o" style="font-size:32px;"></i></div>
+                            </div><!-- end image-wrap -->
+                            <div class="blog-desc">
+                                <h4><a href="#">OSINT usullari asosida signal monitoringi</a></h4>
+                                <p>[QISQA TAVSIF] Ilmiy maqola, 2025-yil nashri.</p>
+                            </div><!-- end blog-desc -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <hr class="invis">
+
+                <div class="section-title text-center">
+                    <h3 style="font-size:20px;">Hamkor tashkilotlar</h3>
+                </div>
+                <div class="partners-row">
+                    <div class="img-placeholder partner-placeholder" role="img" aria-label="Hamkor tashkilot logotipi 1" data-description="[HAMKOR LOGO 1]">LOGO 1</div>
+                    <div class="img-placeholder partner-placeholder" role="img" aria-label="Hamkor tashkilot logotipi 2" data-description="[HAMKOR LOGO 2]">LOGO 2</div>
+                    <div class="img-placeholder partner-placeholder" role="img" aria-label="Hamkor tashkilot logotipi 3" data-description="[HAMKOR LOGO 3]">LOGO 3</div>
+                    <div class="img-placeholder partner-placeholder" role="img" aria-label="Hamkor tashkilot logotipi 4" data-description="[HAMKOR LOGO 4]">LOGO 4</div>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — pricing callout -> Stipendiya va ijtimoiy kafolatlar -->
+        <section class="section bgcolor1">
+            <div class="container">
+                <a href="page-contact.html">
+                <div class="row callout">
+                    <div class="col-md-4 text-center">
+                        <h3><i class="fa fa-shield"></i></h3>
+                        <h4>Stipendiya va ijtimoiy kafolatlar</h4>
+                    </div><!-- end col -->
+
+                    <div class="col-md-8">
+                        <p class="lead">Barcha kursantlar davlat ta'minotida bo'lib, oylik stipendiya, kiyim-kechak, ovqatlanish va yotoqxona bilan ta'minlanadi.</p>
+                    </div>
+                </div><!-- end row -->
+                </a>
+            </div><!-- end container -->
+        </section>
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Footer -->
+        <footer class="section footer noover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="widget clearfix">
+                            <img src="images/ahi.png" alt="Institut gerbi" class="footer-gerb">
+                            <h3 class="widget-title" style="margin-top:20px;">AKTVA Instituti</h3>
+                            <p class="institute-desc">Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti — O'zbekiston Qurolli Kuchlari uchun raqamli mudofaa sohasida zobit kadrlar tayyorlovchi harbiy oliy ta'lim muassasasi.</p>
+                            <div class="social-links">
+                                <a href="#" title="Telegram"><i class="fa fa-telegram"></i></a>
+                                <a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            </div>
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Tezkor havolalar</h3>
+                            <div class="list-widget">
+                                <ul>
+                                    <li><a href="#about">Institut haqida</a></li>
+                                    <li><a href="#yonalishlar">Ta'lim yo'nalishlari</a></li>
+                                    <li><a href="#ilmiy-faoliyat">Ilmiy faoliyat</a></li>
+                                    <li><a href="#qabul">Qabul</a></li>
+                                    <li><a href="page-contact.html">Aloqa</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Aloqa ma'lumotlari</h3>
+                            <div class="list-widget">
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i> &nbsp;Toshkent sh., [MANZIL]</li>
+                                    <li><i class="fa fa-phone"></i> &nbsp;+998 71 200 00 00</li>
+                                    <li><i class="fa fa-envelope"></i> &nbsp;<a href="mailto:info@aktva.uz">info@aktva.uz</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-2 col-md-2">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Foydali havolalar</h3>
+                            <div class="list-widget">
+                                <ul>
+                                    <li><a href="#">Nizom</a></li>
+                                    <li><a href="#">Litsenziya</a></li>
+                                    <li><a href="#">Kadrlar bo'limi</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <!-- HARBIY INSTITUT: o'zgartirildi — Copyrights -->
+        <div class="copyrights">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <p style="color:#aaa;margin:0;padding-top:8px;">&copy; 2026 Axborot Kommunikatsiya Texnologiyalari va Harbiy Aloqa Instituti. Barcha huquqlar himoyalangan.</p>
+                    </div>
+
+                    <div class="pull-right">
+                        <div class="footer-links">
+                            <ul class="list-inline">
+                                <li><a href="#">UZ</a></li>
+                                <li><a href="#">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </div><!-- end copy -->
+    </div><!-- end wrapper -->
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script src="js/videobg.js"></script>
+
+</body>
+</html>
