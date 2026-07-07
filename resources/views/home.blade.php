@@ -196,7 +196,7 @@
             <div class="btn-wrapper text-center">
                 <a href="#" class="btn btn-primary">{{ __("Hujjatlar ro'yxati") }}</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="{{ route('contact') }}#qabul-arizasi" class="btn btn-default" style="border-color:#1B3A2D;color:#1B3A2D !important;">{{ __('Ariza shakli') }}</a>
+                <a href="{{ route('contact') }}" class="btn btn-default" style="border-color:#1B3A2D;color:#1B3A2D !important;">{{ __('Ariza shakli') }}</a>
             </div>
         </div>
     </section>
