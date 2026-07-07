@@ -107,9 +107,7 @@
                                 </h4>
                                 <p>{{ $program->short_description }}</p>
                             </div>
-                            <div class="course-footer clearfix text-center">
-                                <a href="#" class="readmore">{{ __('Batafsil') }}</a>
-                            </div>
+
                         </div>
                     </div>
                 @endforeach
