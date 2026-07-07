@@ -39,21 +39,31 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ route('home') }}">{{ __('Bosh sahifa') }}</a></li>
-                    <li><a href="{{ route('home') }}#about">{{ __('Institut haqida') }}</a></li>
-                    <li><a href="{{ route('home') }}#yonalishlar">{{ __("Ta'lim yo'nalishlari") }}</a></li>
-                    <li><a href="{{ route('home') }}#kursantlarga">{{ __('Kursantlarga') }}</a></li>
-                    <li><a href="{{ route('home') }}#ilmiy-faoliyat">{{ __('Ilmiy faoliyat') }}</a></li>
-                    <li class="dropdown hassubmenu {{ request()->routeIs('publications.*') ? 'active' : '' }}">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ __('Ilmiy jurnallar') }} <span class="fa fa-angle-down"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ route('publications.journals') }}">{{ __('Jurnallar') }}</a></li>
-                            <li><a href="{{ route('publications.collections') }}">{{ __("To'plamlar") }}</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ route('home') }}#qabul">{{ __('Qabul') }}</a></li>
-                    <li><a href="{{ route('news.index') }}" class="{{ request()->routeIs('news.*') ? 'active' : '' }}">{{ __('Yangiliklar') }}</a></li>
-                    <li class="{{ request()->routeIs('contact') ? 'active' : '' }}"><a href="{{ route('contact') }}">{{ __('Aloqa') }}</a></li>
+                    @foreach (($headerMenus ?? []) as $item)
+                        @continue(! $item->is_visible_to_user)
+
+                        @if ($item->children->isNotEmpty())
+                            @php
+                                $visibleChildren = $item->children->filter->is_visible_to_user;
+                                $isParentActive = $visibleChildren->contains(
+                                    fn ($child) => $child->route_name && request()->routeIs($child->route_name)
+                                );
+                            @endphp
+                            @continue($visibleChildren->isEmpty())
+                            <li class="dropdown hassubmenu {{ $isParentActive ? 'active' : '' }}">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ $item->label }} <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    @foreach ($visibleChildren as $child)
+                                        <li><a href="{{ $child->resolved_url }}" @if ($child->open_in_new_tab) target="_blank" rel="noopener" @endif>{{ $child->label }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                            <li class="{{ $item->route_name && ! $item->section_anchor && request()->routeIs($item->route_name) ? 'active' : '' }}">
+                                <a href="{{ $item->resolved_url }}" @if ($item->open_in_new_tab) target="_blank" rel="noopener" @endif>{{ $item->label }}</a>
+                            </li>
+                        @endif
+                    @endforeach
                     <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
                     <li class="iconitem dropdown hassubmenu lang-dropdown">
                         <a href="#" class="lang-switch dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="lang-current">{{ strtoupper(app()->getLocale()) }}</span> <span class="fa fa-angle-down"></span></a>

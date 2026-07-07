@@ -15,6 +15,7 @@ use App\Models\ContentBlock;
 use App\Models\HeroSlide;
 use App\Models\HeroStat;
 use App\Models\Lab;
+use App\Models\Menu;
 use App\Models\News;
 use App\Models\NewsCategory;
 use App\Models\Page;
@@ -99,6 +100,13 @@ class AppServiceProvider extends ServiceProvider
                 'topbarSocialLinks' => SocialLink::active()->location('topbar')->get(),
                 'footerSocialLinks' => SocialLink::active()->location('footer')->get(),
                 'footerPages' => Page::query()->published()->whereIn('slug', ['nizom', 'litsenziya', 'kadrlar-bolimi'])->get(),
+                'headerMenus' => Menu::query()
+                    ->location('header')
+                    ->whereNull('parent_id')
+                    ->where('is_active', true)
+                    ->with(['children' => fn ($query) => $query->where('is_active', true)->orderBy('order')])
+                    ->orderBy('order')
+                    ->get(),
             ]);
         });
     }

@@ -19,10 +19,10 @@ class MenuData extends Data
         public ?string $icon,
         public ?string $permission_name,
         public bool $is_active,
-        public string $link_type,
-        public string $location,
-        public ?int $page_id,
-        public ?string $section_anchor,
-        public bool $open_in_new_tab,
+        public string $link_type = 'url',
+        public string $location = 'header',
+        public ?int $page_id = null,
+        public ?string $section_anchor = null,
+        public bool $open_in_new_tab = false,
     ) {}
 }

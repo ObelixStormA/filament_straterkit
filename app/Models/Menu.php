@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Database\Factories\MenuFactory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Route;
 use Spatie\Translatable\HasTranslations;
 
 class Menu extends Model
@@ -65,6 +67,11 @@ class Menu extends Model
         return $this->belongsTo(Page::class);
     }
 
+    public function scopeLocation(Builder $query, string $location): Builder
+    {
+        return $query->where('location', $location);
+    }
+
     protected function isVisibleToUser(): Attribute
     {
         return Attribute::get(function (): bool {
@@ -77,6 +84,27 @@ class Menu extends Model
             }
 
             return (bool) auth()->user()?->can($this->permission_name);
+        });
+    }
+
+    protected function resolvedUrl(): Attribute
+    {
+        return Attribute::get(function (): string {
+            if ($this->link_type === 'page' && $this->page?->slug) {
+                return route('pages.show', $this->page->slug);
+            }
+
+            if ($this->route_name !== null && Route::has($this->route_name)) {
+                $url = route($this->route_name);
+
+                return $this->section_anchor !== null ? "{$url}#{$this->section_anchor}" : $url;
+            }
+
+            if ($this->url !== null) {
+                return $this->url;
+            }
+
+            return '#';
         });
     }
 }

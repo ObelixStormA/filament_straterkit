@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             PartnerSeeder::class,
             SocialLinkSeeder::class,
             PageSeeder::class,
+            MenuSeeder::class,
         ]);
     }
 }

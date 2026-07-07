@@ -52,6 +52,11 @@ class EditMenu extends EditRecord
             'icon' => $data['icon'] ?? null,
             'permission_name' => $data['permission_name'] ?? null,
             'is_active' => $data['is_active'] ?? true,
+            'link_type' => $data['link_type'] ?? 'url',
+            'location' => $data['location'] ?? 'header',
+            'page_id' => $data['page_id'] ?? null,
+            'section_anchor' => $data['section_anchor'] ?? null,
+            'open_in_new_tab' => $data['open_in_new_tab'] ?? false,
         ]);
 
         /** @var Menu $record */
