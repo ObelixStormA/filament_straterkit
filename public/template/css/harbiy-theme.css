@@ -131,6 +131,13 @@ mark {
     color: #ffffff !important;
 }
 
+/* Bazadagi menyu matnini (label) o'zgartirmasdan, o'zgacha bo'lgan
+   holicha chiqarish uchun andozaning "capitalize" qoidasi bekor qilinadi */
+.navbar-default .nav > li > a,
+.navbar-default .dropdown-menu li a {
+    text-transform: none;
+}
+
 .navbar-default .dropdown-menu {
     background-color: #ffffff;
 }
